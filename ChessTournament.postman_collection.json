@@ -136,6 +136,134 @@
 			]
 		},
 		{
+			"name": "ChessType",
+			"item": [
+				{
+					"name": "getAllChessType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/chess_type",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chess_type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addChessType",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\": \"bullet\",\r\n    \"base_time_minutes\": \"1\",\r\n    \"increment_seconds\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/chess_type",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chess_type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateChessType",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\": \"rapid\",\r\n    \"base_time_minutes\": \"1\",\r\n    \"increment_seconds\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/chess_type/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chess_type",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteChessType",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/chess_type/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chess_type",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOneChessType",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Shohzod\",\r\n    \"last_name\": \"Mardonov\",\r\n    \"phone_number\": \"12345673322\",\r\n    \"address\": \"Uchtepa\",\r\n    \"email\": \"shohmar@mail.com\",\r\n    \"passport_ser\": \"AB\",\r\n    \"passport_number\": \"4455566\",\r\n    \"password\": \"1234\",\r\n    \"confirm_password\": \"1234\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/chess_type/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chess_type",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Match",
 			"item": [
 				{
@@ -392,35 +520,35 @@
 			]
 		},
 		{
-			"name": "ChessType",
+			"name": "Round",
 			"item": [
 				{
-					"name": "getAllChessType",
+					"name": "getAllRound",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:3000/api/chess_type",
+							"raw": "localhost:3000/api/round",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"api",
-								"chess_type"
+								"round"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "addChessType",
+					"name": "addRound",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"category\": \"bullet\",\r\n    \"base_time_minutes\": \"1\",\r\n    \"increment_seconds\": 1\r\n}",
+							"raw": "{\r\n    \"round_number\": 1,\r\n    \"status\": 1,\r\n    \"start_time\": \"2025-09-25\",\r\n    \"end_time\": \"2025-09-26\",\r\n    \"tournamentId\":1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -428,27 +556,27 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/chess_type",
+							"raw": "localhost:3000/api/round",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"api",
-								"chess_type"
+								"round"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "updateChessType",
+					"name": "updateRound",
 					"request": {
 						"method": "PATCH",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"category\": \"rapid\",\r\n    \"base_time_minutes\": \"1\",\r\n    \"increment_seconds\": 1\r\n}",
+							"raw": "{\r\n    \"round_number\": 2,\r\n    \"status\": 1,\r\n    \"start_time\": \"2025-09-25\",\r\n    \"end_time\": \"2025-09-26\",\r\n    \"tournamentId\":1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -456,14 +584,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/chess_type/1",
+							"raw": "localhost:3000/api/round/1",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"api",
-								"chess_type",
+								"round",
 								"1"
 							]
 						}
@@ -471,19 +599,19 @@
 					"response": []
 				},
 				{
-					"name": "deleteChessType",
+					"name": "deleteRound",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:3000/api/chess_type/1",
+							"raw": "localhost:3000/api/round/1",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"api",
-								"chess_type",
+								"round",
 								"1"
 							]
 						}
@@ -491,7 +619,7 @@
 					"response": []
 				},
 				{
-					"name": "getOneChessType",
+					"name": "getOneRound",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -503,14 +631,270 @@
 							"raw": "{\r\n    \"first_name\": \"Shohzod\",\r\n    \"last_name\": \"Mardonov\",\r\n    \"phone_number\": \"12345673322\",\r\n    \"address\": \"Uchtepa\",\r\n    \"email\": \"shohmar@mail.com\",\r\n    \"passport_ser\": \"AB\",\r\n    \"passport_number\": \"4455566\",\r\n    \"password\": \"1234\",\r\n    \"confirm_password\": \"1234\"\r\n}"
 						},
 						"url": {
-							"raw": "localhost:3000/api/chess_type/1",
+							"raw": "localhost:3000/api/round/2",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"api",
-								"chess_type",
+								"round",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TournamentPlayer",
+			"item": [
+				{
+					"name": "getAllTournamentPlayer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/tournament_player",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"tournament_player"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addTournamentPlayer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"current_score\": 1,\r\n    \"rank\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/tournament_player",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"tournament_player"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTournamentPlayer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"current_score\": 2,\r\n    \"rank\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/tournament_player/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"tournament_player",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTournamentPlayer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/tournament_player/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"tournament_player",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOneTournamentPlayer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Shohzod\",\r\n    \"last_name\": \"Mardonov\",\r\n    \"phone_number\": \"12345673322\",\r\n    \"address\": \"Uchtepa\",\r\n    \"email\": \"shohmar@mail.com\",\r\n    \"passport_ser\": \"AB\",\r\n    \"passport_number\": \"4455566\",\r\n    \"password\": \"1234\",\r\n    \"confirm_password\": \"1234\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/tournament_player/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"tournament_player",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getAllUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"Shohzod\",\r\n    \"username\": \"Mardonov\",\r\n    \"email\": \"shohmar@mail.com\",\r\n    \"password\": \"1234\",\r\n    \"confirm_password\": \"1234\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"TTTT\",\r\n    \"username\": \"Mardonov\",\r\n    \"email\": \"shohmar@mail.com\",\r\n    \"password\": \"1234\",\r\n    \"confirm_password\": \"1234\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOneUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Shohzod\",\r\n    \"last_name\": \"Mardonov\",\r\n    \"phone_number\": \"12345673322\",\r\n    \"address\": \"Uchtepa\",\r\n    \"email\": \"shohmar@mail.com\",\r\n    \"passport_ser\": \"AB\",\r\n    \"passport_number\": \"4455566\",\r\n    \"password\": \"1234\",\r\n    \"confirm_password\": \"1234\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
 								"1"
 							]
 						}

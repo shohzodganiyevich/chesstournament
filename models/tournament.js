@@ -30,7 +30,7 @@ const Tournament = sequelize.define("tournament", {
   },
   status: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   rounds_number: {
     type: DataTypes.INTEGER,

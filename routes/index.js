@@ -5,6 +5,8 @@ const chessTypeRoutes = require("./chess_type.routes");
 const matchRoutes = require("./macht.routes");
 const roundRoutes = require("./round.routes");
 const tournamentPlayerRoutes = require("./tournament_player.routes");
+const userRoutes = require("./user.routes");
+const tournamentRoutes = require("./tournament.routes");
 
 const routes = require("express").Router();
 
@@ -15,5 +17,7 @@ routes.use("/chess_type", chessTypeRoutes);
 routes.use("/match", matchRoutes);
 routes.use("/round", roundRoutes);
 routes.use("/tournament_player", tournamentPlayerRoutes);
+routes.use("/user", userRoutes);
+routes.use("/tournament", tournamentRoutes);
 
 module.exports = routes;
